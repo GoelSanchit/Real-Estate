@@ -1,0 +1,468 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    function showimagepreview(input) {
+       //alert("Hello");
+        if (input.files && input.files[0]) {
+            var filerdr = new FileReader();
+            filerdr.onload = function (e) {
+                $('#Image18').attr('src', e.target.result);
+            }
+            filerdr.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+    <style type="text/css">
+        .style2
+        {
+            width: 176px;
+        }
+        .style4
+        {
+            margin-left:85px;
+        }
+        .style5
+        {
+            width: 66px;
+        }
+        .style6
+        {
+            width: 58px;
+        }
+        .style7
+        {
+            height: 23px;
+        }
+        .style8
+        {
+            width: 176px;
+            height: 23px;
+        }
+    </style>
+
+    <style type="text/css">
+        .style1
+        {
+            width: 934px;
+        }
+        .style2
+        {
+            width: 68px;
+        }
+        .style3
+        {
+            width: 253px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="registerproperty.jsp" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTIwMTg0Nzc4D2QWAmYPZBYCAgMPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWBAIHD2QWAmYPDxYCHgRUZXh0BQFzZGQCDQ9kFgwCCw8QDxYCHgtfIURhdGFCb3VuZGdkEBUjE0FuZGFtYW4gYW5kIE5pY29iYXIOQW5kaHJhIFByYWRlc2gRQXJ1bmFjaGFsIFByYWRlc2gFQXNzYW0FQmloYXIKQ2hhbmRpZ2FyaAxDaGhhdHRpc2dhcmgWRGFkcmEgYW5kIE5hZ2FyIEhhdmVsaQ1EYW1hbiBhbmQgRGl1BURlbGhpA0dvYQdHdWphcmF0B0hhcnlhbmEQSGltYWNoYWwgUHJhZGVzaBFKYW1tdSBhbmQgS2FzaG1pcglKaGFya2hhbmQJS2FybmF0YWthBktlcmFsYQtMYWtzaGFkd2VlcA5NYWRoeWEgUHJhZGVzaAtNYWhhcmFzaHRyYQdNYW5pcHVyCU1lZ2hhbGF5YQdNaXpvcmFtCE5hZ2FsYW5kBk9yaXNzYQpQdWR1Y2hlcnJ5BlB1bmphYglSYWphc3RoYW4GU2lra2ltClRhbWlsIE5hZHUHVHJpcHVyYQ1VdHRhciBQcmFkZXNoC1V0dGFyYWtoYW5kC1dlc3QgQmVuZ2FsFSMTQW5kYW1hbiBhbmQgTmljb2Jhcg5BbmRocmEgUHJhZGVzaBFBcnVuYWNoYWwgUHJhZGVzaAVBc3NhbQVCaWhhcgpDaGFuZGlnYXJoDENoaGF0dGlzZ2FyaBZEYWRyYSBhbmQgTmFnYXIgSGF2ZWxpDURhbWFuIGFuZCBEaXUFRGVsaGkDR29hB0d1amFyYXQHSGFyeWFuYRBIaW1hY2hhbCBQcmFkZXNoEUphbW11IGFuZCBLYXNobWlyCUpoYXJraGFuZAlLYXJuYXRha2EGS2VyYWxhC0xha3NoYWR3ZWVwDk1hZGh5YSBQcmFkZXNoC01haGFyYXNodHJhB01hbmlwdXIJTWVnaGFsYXlhB01pem9yYW0ITmFnYWxhbmQGT3Jpc3NhClB1ZHVjaGVycnkGUHVuamFiCVJhamFzdGhhbgZTaWtraW0KVGFtaWwgTmFkdQdUcmlwdXJhDVV0dGFyIFByYWRlc2gLVXR0YXJha2hhbmQLV2VzdCBCZW5nYWwUKwMjZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIPDxAPFgIfAmdkEBUmBkFyYXJpYQpBdXJhbmdhYmFkBUJhbmthCUJlZ3VzYXJhaQlCaGFnYWxwdXIHQmhvanB1cgVCdXhhcglEYXJiaGFuZ2EER2F5YQlHb3BhbGdhbmoFSmFtdWkJSmVoYW5hYmFkBkthaW11cgdLYXRpaGFyCEtoYWdhcmlhCktpc2hhbmdhbmoKTGFraGlzYXJhaQlNYWRoZXB1cmEJTWFkaHViYW5pBk11bmdlcgtNdXphZmZhcnB1cgdOYWxhbmRhBk5hd2FkYRJQYXNoY2hpbSBDaGFtcGFyYW4FUGF0bmEPUHVyYmEgQ2hhbXBhcmFuBlB1cm5pYQZSb2h0YXMHU2FoYXJzYQpTYW1hc3RpcHVyBVNhcmFuC1NlbGVjdCBDaXR5ClNoZWlraHB1cmEHU2hlb2hhcglTaXRhbWFyaGkFU2l3YW4GU3VwYXVsCFZhaXNoYWxpFSYGQXJhcmlhCkF1cmFuZ2FiYWQFQmFua2EJQmVndXNhcmFpCUJoYWdhbHB1cgdCaG9qcHVyBUJ1eGFyCURhcmJoYW5nYQRHYXlhCUdvcGFsZ2FuagVKYW11aQlKZWhhbmFiYWQGS2FpbXVyB0thdGloYXIIS2hhZ2FyaWEKS2lzaGFuZ2FuagpMYWtoaXNhcmFpCU1hZGhlcHVyYQlNYWRodWJhbmkGTXVuZ2VyC011emFmZmFycHVyB05hbGFuZGEGTmF3YWRhElBhc2hjaGltIENoYW1wYXJhbgVQYXRuYQ9QdXJiYSBDaGFtcGFyYW4GUHVybmlhBlJvaHRhcwdTYWhhcnNhClNhbWFzdGlwdXIFU2FyYW4LU2VsZWN0IENpdHkKU2hlaWtocHVyYQdTaGVvaGFyCVNpdGFtYXJoaQVTaXdhbgZTdXBhdWwIVmFpc2hhbGkUKwMmZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIRDw9kDxAWAWYWARYCHg5QYXJhbWV0ZXJWYWx1ZQUFQmloYXIWAWZkZAIZDxBkDxYGZgIBAgICAwIEAgUWBhAFATAFATBnEAUBMQUBMWcQBQEyBQEyZxAFATMFATNnEAUBNAUBNGcQBQE1BQE1Z2RkAhsPEGQPFgZmAgECAgIDAgQCBRYGEAUBMAUBMGcQBQExBQExZxAFATIFATJnEAUBMwUBM2cQBQE0BQE0ZxAFATUFATVnZGQCHQ8QZA8WBmYCAQICAgMCBAIFFgYQBQEwBQEwZxAFATEFATFnEAUBMgUBMmcQBQEzBQEzZxAFATQFATRnEAUBNQUBNWdkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBwUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRSYWRpb0J1dHRvbjEFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUmFkaW9CdXR0b24xBSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFJhZGlvQnV0dG9uMgUmY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRSYWRpb0J1dHRvbjIFI2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQ2hlY2tCb3gxBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJENoZWNrQm94MgUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRDaGVja0JveDN3EnD+Xyw3XY833G+jmaocQ6kKea5MMJAgd95YxhWodg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=S8ilp4ey-k3eBBVp3k7OsYbIzyzQ_LgCgD9Fg_oFmLL_9rAJooxklq2CexdG-qVu5XaqmQNpfwO2gVZkIRt_TjZiIUbcCaBIWVNHwhAnSU81&amp;t=635588816558757176" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B6EA3EA2" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+    
+       <div style="width:100%">
+    <table align="center" width="100%"> 
+    <tr><td class="style2">
+        <img id="Image1" src="img/real_estate.jpg" style="height:64px;width:71px;" />
+        </td><td class="style3">
+        <span id="Label1" style="color:Black;font-size:XX-Large;font-weight:bold;">Real</span>
+            <span id="Label2" style="color:Red;font-size:XX-Large;font-weight:bold;">ESTATE</span>
+        </td><td>
+            &nbsp;</td>
+        <td align="left"
+            style="color: #FF0000; font-size: x-large; font-weight: bold;">
+            &nbsp;</td>
+        <td ></td><td align="right">&nbsp;</td>
+        <td align="right">
+            <a id="HyperLink2" href="user.jsp"><span id="Label5">&nbsp;<%=session.getAttribute("user")%></span></a>
+			<a href="logoutprocess.jsp">Logout</a>
+        </td></tr> 
+    </table>
+    </div>
+    <div style="background:#666666; width: 100%; height: 2px;">
+    
+    </div>
+    <div >
+    <table align="center" bgcolor="#4F95FF" >
+   <tr><td class="style1">
+       <span id="Label4" style="color:White;font-size:X-Large;font-weight:bold;">Advertise Your Property</span>
+       </td><td></td></tr>
+       <tr><td class="style1" style="color: #FFFFFF">Get immediate response over Phone, Email, SMS. Over 1 Lakh property seekers every day. Accessed by over 20% NRI Traffic</td><td></td></tr>
+   </table>
+    </div>
+
+
+    <br />
+    <div>
+        
+
+    <div style="height:1825px">
+    
+       <span id="ContentPlaceHolder1_Label5" class="style4" style="color:#6AB5FF;font-size:Large;font-weight:bold;">REGISTER PROPERTY DETAILS & PROFILE</span>
+
+    <br />
+   <hr style="border-color: #0000FF; width:1320px" />
+   <br />
+       <br />
+       <br />
+   <br />
+ 
+   <span id="ContentPlaceHolder1_Label1" class="style4" style="color:Black;font-size:Large;font-weight:bold;">REGISTER PROPERTY DETAILS & PROFILE</span>
+    &nbsp;Start posting Your Property and add Property Features
+   
+    <br />
+   <hr style="border-color: #C0C0C0; width:1320px" />
+   <table align="center">
+   <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+     <tr><td align="right">I want to: </td><td>&nbsp;
+         <input id="ContentPlaceHolder1_RadioButton1" type="radio" name="ctl00$ContentPlaceHolder1$g1" value="RadioButton1" /><label for="ContentPlaceHolder1_RadioButton1">Sell</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input id="ContentPlaceHolder1_RadioButton2" type="radio" name="ctl00$ContentPlaceHolder1$g1" value="RadioButton2" /><label for="ContentPlaceHolder1_RadioButton2">Rent/Lease Out</label>
+         </td><td></td><td></td></tr>
+         <tr><td></td><td></td><td></td><td></td></tr>
+      <tr><td align="right">Type of Property:</td><td>
+          <select name="ctl00$ContentPlaceHolder1$DropDownList1" id="ContentPlaceHolder1_DropDownList1" style="height:34px;width:200px;">
+	<option selected="selected" value="Agriculture">Agriculture</option>
+	<option value="Commercial">Commercial</option>
+	<option value="Residential">Residential</option>
+
+</select>
+          </td><td></td><td></td></tr>
+       <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td align="right">
+            State:</td><td>
+          <select name="ctl00$ContentPlaceHolder1$DropDownList7" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownList7\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownList7" style="height:34px;width:200px;">
+	<option value="Andaman and Nicobar">Andaman and Nicobar</option>
+	<option value="Andhra Pradesh">Andhra Pradesh</option>
+	<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+	<option value="Assam">Assam</option>
+	<option selected="selected" value="Bihar">Bihar</option>
+	<option value="Chandigarh">Chandigarh</option>
+	<option value="Chhattisgarh">Chhattisgarh</option>
+	<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+	<option value="Daman and Diu">Daman and Diu</option>
+	<option value="Delhi">Delhi</option>
+	<option value="Goa">Goa</option>
+	<option value="Gujarat">Gujarat</option>
+	<option value="Haryana">Haryana</option>
+	<option value="Himachal Pradesh">Himachal Pradesh</option>
+	<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+	<option value="Jharkhand">Jharkhand</option>
+	<option value="Karnataka">Karnataka</option>
+	<option value="Kerala">Kerala</option>
+	<option value="Lakshadweep">Lakshadweep</option>
+	<option value="Madhya Pradesh">Madhya Pradesh</option>
+	<option value="Maharashtra">Maharashtra</option>
+	<option value="Manipur">Manipur</option>
+	<option value="Meghalaya">Meghalaya</option>
+	<option value="Mizoram">Mizoram</option>
+	<option value="Nagaland">Nagaland</option>
+	<option value="Orissa">Orissa</option>
+	<option value="Puducherry">Puducherry</option>
+	<option value="Punjab">Punjab</option>
+	<option value="Rajasthan">Rajasthan</option>
+	<option value="Sikkim">Sikkim</option>
+	<option value="Tamil Nadu">Tamil Nadu</option>
+	<option value="Tripura">Tripura</option>
+	<option value="Uttar Pradesh">Uttar Pradesh</option>
+	<option value="Uttarakhand">Uttarakhand</option>
+	<option value="West Bengal">West Bengal</option>
+
+</select>
+                
+            </td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td align="right">City</td><td>
+          <select name="ctl00$ContentPlaceHolder1$DropDownList8" id="ContentPlaceHolder1_DropDownList8" style="height:34px;width:200px;">
+	<option value="Araria">Araria</option>
+	<option value="Aurangabad">Aurangabad</option>
+	<option value="Banka">Banka</option>
+	<option value="Begusarai">Begusarai</option>
+	<option value="Bhagalpur">Bhagalpur</option>
+	<option value="Bhojpur">Bhojpur</option>
+	<option value="Buxar">Buxar</option>
+	<option value="Darbhanga">Darbhanga</option>
+	<option value="Gaya">Gaya</option>
+	<option value="Gopalganj">Gopalganj</option>
+	<option value="Jamui">Jamui</option>
+	<option value="Jehanabad">Jehanabad</option>
+	<option value="Kaimur">Kaimur</option>
+	<option value="Katihar">Katihar</option>
+	<option value="Khagaria">Khagaria</option>
+	<option value="Kishanganj">Kishanganj</option>
+	<option value="Lakhisarai">Lakhisarai</option>
+	<option value="Madhepura">Madhepura</option>
+	<option value="Madhubani">Madhubani</option>
+	<option value="Munger">Munger</option>
+	<option value="Muzaffarpur">Muzaffarpur</option>
+	<option value="Nalanda">Nalanda</option>
+	<option value="Nawada">Nawada</option>
+	<option value="Pashchim Champaran">Pashchim Champaran</option>
+	<option value="Patna">Patna</option>
+	<option value="Purba Champaran">Purba Champaran</option>
+	<option value="Purnia">Purnia</option>
+	<option value="Rohtas">Rohtas</option>
+	<option value="Saharsa">Saharsa</option>
+	<option value="Samastipur">Samastipur</option>
+	<option value="Saran">Saran</option>
+	<option value="Select City">Select City</option>
+	<option value="Sheikhpura">Sheikhpura</option>
+	<option value="Sheohar">Sheohar</option>
+	<option value="Sitamarhi">Sitamarhi</option>
+	<option value="Siwan">Siwan</option>
+	<option value="Supaul">Supaul</option>
+	<option value="Vaishali">Vaishali</option>
+
+</select>
+                
+                </td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+    
+   </table>
+       <br />
+       <br />
+        <hr style="border-color: #C0C0C0; width:1320px" />
+  
+  
+   <br />
+   <table align="center">
+   <tr><td align="right">Additional Address: </td><td class="style2">
+       <input name="ctl00$ContentPlaceHolder1$TextBox1" type="text" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$TextBox1\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ContentPlaceHolder1_TextBox1" style="height:28px;width:300px;" />
+       </td><td></td></tr>
+       <tr><td></td><td class="style2"></td><td></td></tr>
+         <tr><td align="right">
+        
+             </td><td class="style2">&nbsp;&nbsp;
+                 <br />
+             </td><td></td></tr>
+          <tr><td class="style7">
+      
+              </td><td class="style8">
+                  &nbsp;</td><td class="style7"></td></tr>
+           
+   </table>
+    <br /><br />
+   <hr style="border-color: #C0C0C0; width:1320px" />
+   <br /><br />
+ <table align="center"><tr><td>Bedroom:</td><td>
+     <select name="ctl00$ContentPlaceHolder1$DropDownList2" id="ContentPlaceHolder1_DropDownList2" style="font-size:Medium;height:45px;width:150px;">
+	<option selected="selected" value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+
+</select>
+     </td><td></td><td></td><td>Bathroom</td><td>
+     <select name="ctl00$ContentPlaceHolder1$DropDownList3" id="ContentPlaceHolder1_DropDownList3" style="font-size:Medium;height:45px;width:150px;">
+	<option selected="selected" value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+
+</select>
+     </td><td>
+         &nbsp;</td><td></td><td>Balcony:</td><td>
+     <select name="ctl00$ContentPlaceHolder1$DropDownList4" id="ContentPlaceHolder1_DropDownList4" style="font-size:Medium;height:45px;width:150px;">
+	<option selected="selected" value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+
+</select>
+     </td></tr>
+     </table>
+  <br />
+  <br />
+  <table align="center">
+  <tr><td>
+      <input id="ContentPlaceHolder1_CheckBox1" type="checkbox" name="ctl00$ContentPlaceHolder1$CheckBox1" /><label for="ContentPlaceHolder1_CheckBox1">Pooja Room</label>
+      </td><td></td><td>
+      <input id="ContentPlaceHolder1_CheckBox2" type="checkbox" name="ctl00$ContentPlaceHolder1$CheckBox2" /><label for="ContentPlaceHolder1_CheckBox2">Study Room</label>
+      </td><td></td><td>
+      <input id="ContentPlaceHolder1_CheckBox3" type="checkbox" name="ctl00$ContentPlaceHolder1$CheckBox3" /><label for="ContentPlaceHolder1_CheckBox3">Others</label>
+      </td><td></td></tr>
+  </table>
+  <hr style="border-color: #C0C0C0; width:1320px" />
+  <br />
+  <br />
+
+
+  <table align="center">
+  <tr><td align="right">Build -up Area:</td><td>
+      <input name="ctl00$ContentPlaceHolder1$TextBox2" type="text" id="ContentPlaceHolder1_TextBox2" style="height:27px;width:200px;" />
+      </td><td>
+          <span id="ContentPlaceHolder1_Label14" style="color:#999999;font-size:Large;">In sq feet</span>
+      </td><td>
+          &nbsp;</td></tr>
+      <tr><td></td><td>
+          <span id="ContentPlaceHolder1_Label8" style="color:#999999;">Enter Numeric Value 1700.5</span>
+          </td><td></td><td></td></tr>
+  </table>
+
+  <br />
+    <hr style="border-color: #C0C0C0; width:1320px" />
+    <br />
+    <br />
+
+
+    <table align="center" style="height: 74px">
+  <tr><td align="right">Expected Price:</td><td>
+      <input name="ctl00$ContentPlaceHolder1$TextBox3" type="text" id="ContentPlaceHolder1_TextBox3" style="height:27px;width:200px;" />
+      </td><td></td><td>
+      &nbsp;</td></tr>
+      <tr><td></td><td>&nbsp;<span id="ContentPlaceHolder1_Label3" style="font-size:Large;font-weight:bold;">[+]</span>
+          <span id="ContentPlaceHolder1_Label2" style="color:#0099FF;">Add Price Per Unit Area</span>
+          </td><td></td><td></td></tr>
+  </table>
+
+   
+       <br />
+       <br />
+
+   <br />
+   <span id="ContentPlaceHolder1_Label9" class="style4" style="color:Black;font-size:Large;font-weight:bold;">Add Property Photo</span>
+   
+    <hr style="border-color: #C0C0C0; width:1320px" />
+       <br />
+       <br />
+       <div>
+       <table align="center">
+       <tr><td align="right">
+           <span id="ContentPlaceHolder1_Label10" style="font-size:Large;font-weight:bold;">Cover Photo:</span>
+           </td><td class="style5"></td><td>
+           <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload1" id="ContentPlaceHolder1_FileUpload1" onchange="showimagepreview(this)" />
+           </td><td></td><td class="style6" rowspan="7">
+          
+               <img id="ContentPlaceHolder1_Image18" src="" />
+           </tr>
+           <tr><td></td><td class="style5"></td><td></td><td></td></tr>
+       <tr><td align="right">
+           <span id="ContentPlaceHolder1_Label11" style="font-size:Large;font-weight:bold;">Rooms:</span>
+           </td><td class="style5"></td><td>
+           <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload2" id="ContentPlaceHolder1_FileUpload2" onchange="showimagepreview(this)" />
+           </td><td></td></tr>
+       <tr><td></td><td class="style5"></td><td></td><td></td></tr>
+       <tr><td align="right">
+           <span id="ContentPlaceHolder1_Label12" style="font-size:Large;font-weight:bold;">Kitchen:</span>
+           </td><td class="style5"></td><td>
+           <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload3" id="ContentPlaceHolder1_FileUpload3" onchange="showimagepreview(this)" />
+           </td><td></td></tr>
+       <tr><td></td><td class="style5"></td><td></td><td></td></tr>
+        <tr><td align="right">
+           <span id="ContentPlaceHolder1_Label13" style="font-size:Large;font-weight:bold;">Others:</span>
+            </td><td class="style5"></td><td>
+            <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload4" id="ContentPlaceHolder1_FileUpload4" onchange="showimagepreview(this)" />
+            </td><td></td></tr>
+       </table>
+       </div>
+       <br />
+       <br />
+       
+    <br />
+    <br />
+
+     <span id="ContentPlaceHolder1_Label4" class="style4" style="color:Black;font-size:Large;font-weight:bold;">Property Features and Amenities</span>
+       <br />
+   <hr style="border-color: #C0C0C0; width:1320px" />
+
+
+   <br />
+   <br />
+ 
+
+    <table align="center" style="height: 74px">
+  <tr><td align="right">Property Description:</td><td>
+      <textarea name="ctl00$ContentPlaceHolder1$TextBox4" rows="2" cols="20" id="ContentPlaceHolder1_TextBox4" style="height:54px;width:499px;">
+</textarea>
+      </td><td></td><td>
+      &nbsp;</td></tr>
+      <tr><td></td><td>Write an interesting and detailed property description of min 100 
+          character .</td><td></td><td></td></tr>
+  </table>
+
+  <br />
+  <br />
+
+  <div class="style4">
+  <table>
+  <tr><td> By clicking below you agree to 
+           <a id="ContentPlaceHolder1_HyperLink2" href="termandcondition.html" style="color:#3399FF;">Term and Condition.</a></td></tr>
+               <tr><td></td></tr>
+   <tr><td>
+            <input type="submit" name="ctl00$ContentPlaceHolder1$Button3" value="Advertise your property" id="ContentPlaceHolder1_Button3" style="color:White;background-color:#0066FF;border-color:#0033CC;border-style:Groove;font-size:Large;font-weight:bold;height:60px;width:255px;" />
+               </td></tr>
+  </table>
+  </div>
+
+ <br />
+ <br />
+       <br />
+       <br />
+ <br />
+ <div style="width: 100%; height:280px;">
+
+        <img id="ContentPlaceHolder1_Image5" src="img/design-footer-446.png" style="height:280px;width:100%;" />
+
+    </div>
+
+
+
+ <div>
+    
+     <span id="ContentPlaceHolder1_Label6" style="font-size:XX-Large;font-weight:bold;">Developed By</span>
+     <span id="ContentPlaceHolder1_Label7" style="color:#CC0000;font-size:X-Large;">SYS</span>
+  </div>
+   </div>
+   
+
+    
+   
+    </div>
+    </form>
+</body>
+</html>
